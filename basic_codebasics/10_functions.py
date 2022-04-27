@@ -45,7 +45,7 @@ def calculate_area2(x, y):
     area2 = x * y
     return area2
 
-if shape == 'triangle':
-    print("The area of the triangle is", calculate_area1(b, h), " sq_cm.")
+if shape == 'square':
+    print("The area of the triangle is", calculate_area2(b, h), " sq_cm.")
 else:
-    print("The area of the rectangle is", calculate_area2(b, h), " sq_cm.")
+    print("The area of the rectangle is", calculate_area1(b, h), " sq_cm.")
