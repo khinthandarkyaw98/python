@@ -66,15 +66,16 @@ else:
 # exercise 4
 
 for k in range(1,6):
+    if k == 5:
+        print("Congrtulations! You finished 5 miles.")
+        break
     print(f"you ran {k} miles.")
     tired = input("are you tired?")
     if tired == 'yes':
+        print(f"You did not finish the race but you ran {k} miles.")
         break
-
-if k == 5:
-    print("Congrtulations! You finished 5 miles.")
-else:
-    print(f"You did not finish the race but you ran {k} miles.")
+    else:
+        continue
 
 # exercise 5
 
