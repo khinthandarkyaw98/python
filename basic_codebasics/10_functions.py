@@ -19,33 +19,35 @@ if input is 4 then it should print
 Basically number of lines it prints is equal to that number. (Hint: you need to use two for loops)
 """
 
-# execrise 1
-def calculate_area1(b=1,h=1):
-    """
-    :param b: base
-    :param h: height
-    :return area1: area of the triangle
-    """
-    area1 = 1/2*(b*h)
-    return area1
+# Exercies 1 & 2
+def calculate_area(x, y, shape = "triangle"):
+    if shape == "triangle":
+        triangle_area = 1/2 * (x * y)
+        return triangle_area
+    elif shape == "rectangle":
+        rectangle_area = x * y
+        return  rectangle_area
+    else:
+        triangle_area = 1 / 2 * (x * y)
+        return triangle_area
 
-b = int(input("Enter the base of the triangle in cm\n"))
-h = int(input("Enter the height of the triangle in cm\n"))
-print("The area of the triangle is ",calculate_area1(b,h)," sq_cm.")
 
-# exercise 2
+b = int(input("Enter base of the triangle in cm."))
+h = int(input("Enter height of the triangle in cm."))
 shape = input("is it 'triangle' or 'rectangle'?")
+area = calculate_area(b, h, shape)
+print(f"The area of the {shape} = ", area)
 
-def calculate_area2(x, y):
-    """
-    :param x:
-    :param y:
-    :return area2: area of the rectangle
-    """
-    area2 = x * y
-    return area2
+def print_pattern(n = 5):
+    for i in range(n):
+        p = " "
+        for j in range(i+1):
+            p +=  "*"
+        print(p)
 
-if shape == 'square':
-    print("The area of the triangle is", calculate_area2(b, h), " sq_cm.")
-else:
-    print("The area of the rectangle is", calculate_area1(b, h), " sq_cm.")
+# Exercise 3
+num = int(input("Enter the number."))
+print_pattern(num)
+
+
+
