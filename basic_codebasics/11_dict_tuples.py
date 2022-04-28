@@ -5,7 +5,10 @@ Link for the question of the exercise
 """
 # ex 1
 # i
-population = {"China": 143, "India": 136, "USA": 32, "Pakistan": 21}
+population = {"China": 143,
+              "India": 136,
+              "USA": 32,
+              "Pakistan": 21}
 # ii
 # (a)
 def format_pattern(population):
