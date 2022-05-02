@@ -20,7 +20,8 @@ except Exception as e:
 del emp
 
 try:
-    print(emp)
+    print(emp.name)
+    emp.display()
 
 except Exception as e:
     print('the object emp is not found')
