@@ -16,7 +16,8 @@ class Dog(Anmial):
         super().__init__("Dog")
 
     def soung(self):
-        super().sound()
+        Anmial.sound(self) # we need to pass (self) if we use classname
+        super().sound() # we do not need to pass self if we use super()
         print("Woof WOOF")
 
 d = Dog()
