@@ -11,3 +11,8 @@ import pytest
 def test_cal_square(test_output, expected_output):
     result = mathlib.cal_square(test_output)
     assert result == expected_output
+
+
+# open cd
+# go to the path of this file
+# type py.test -v
