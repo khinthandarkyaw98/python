@@ -34,6 +34,7 @@ if __name__ == "__main__":
     d.join()
     w.join()
 
-    print(balance.value) # print(balance) does not work due to its shared data processing nature
+    print(balance.value)
+    # print(balance) does not work due to its shared data processing nature
 
 
