@@ -18,8 +18,11 @@ def func2(num):
     for i in range(num):
         time.sleep(0.2)
         print(f"func2 = {i*i}\n")
+        print("acive_count", threading.active_count())
+        # active_count() is an inbuilt method of the threading module in Python.
+        # It is used to return the number of Thread objects that are active at any instant.
 
-a = 10
+a = 4
 
 t = time.time()
 t1 = threading.Thread(target=func, args=(a,))
