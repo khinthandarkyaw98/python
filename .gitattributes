@@ -1,2 +1,7 @@
 *.C linguist-detectable=false
 *.C++ linguist-detectable=false
+*.c, c++, Python linguist-language = Python
+
+# the above code may be incorrect
+# this is just for temporary testing
+
