@@ -71,3 +71,18 @@ b = np.arange(3, 15, 4).reshape(3, 1)
 print("\nIterating both two arrays by elment-wise for each row")
 for x, y in np.nditer([a, b]):
     print(x, y)
+
+# output
+# Iterating both two arrays by element-wise for each row
+# 0 3
+# 1 3
+# 4 3
+# 9 3
+# 16 7
+# 25 7
+# 36 7
+# 49 7
+# 64 11
+# 81 11
+# 100 11
+# 121 11
