@@ -43,7 +43,23 @@ for k, val in month.items():
         print("Sorry, the customer did not spend exactly 2000 dollars in any month.")
         break
 
+# (3) can be simply solved as followings.
+print("Did I spend $ 2000 in any mont?", 2000 in expense)
 
+# (4)
+expense.append(1980)
+print("After adding the expenses of June to the list :", expense)
 
+# (5)
+expense.insert(3, expense[3]-200)
+print(f"After returning the item bought in April and receiving the refund"
+      f" of $ 200, the monthly expense list became {expense}")
 
-
+"""
+In Feb, extra 150 dollars were spent compared to January. 
+total expense in first quarter of the year = 7150 dollars 
+Sorry, the customer did not spend exactly 2000 dollars in any month.
+Did I spend $ 2000 in any mont? False
+After adding the expenses of June to the list : [2200, 2350, 2600, 2130, 2190, 1980]
+After returning the item bought in April and receiving the refund of $ 200, the monthly expense list became [2200, 2350, 2600, 1930, 2130, 2190, 1980]
+"""
