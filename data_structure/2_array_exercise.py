@@ -92,3 +92,25 @@ print(f"Solution for ex(4): {heros}")
 # (5)
 heros.sort()
 print("After sorting: ", heros)
+
+################################################################################################################
+
+# exercise 3
+
+num = int(input("Enter a maximum number."))
+
+print("Odd numbers are: ")
+
+def odd(num):
+    a = []
+    if num <= 0:
+        return None
+    else:
+        for i in range(num):
+            if i%2 != 0:
+                a.append(i)
+        return a
+
+print(odd(num))
+
+
