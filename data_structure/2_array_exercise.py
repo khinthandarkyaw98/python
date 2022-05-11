@@ -17,3 +17,33 @@ def total_exp(expense, i):
 
 print(f"total expense in first quarter of the year = {total_exp(expense, 3)}"
       f" dollars ")
+
+# (3)
+def find(expense):
+    for i in range(len(expense)):
+        if expense[i] == 2000:
+            return i
+        else:
+            return 6
+
+ret = find(expense)
+retu = ret + 1
+
+month = {1: 'January',
+         2: 'February',
+         3: 'March',
+         4: 'April',
+         5: 'May'}
+
+for k, val in month.items():
+    if retu == k:
+        print(f"2000 dollars were spent in {val}")
+        break
+    else:
+        print("Sorry, the customer did not spend exactly 2000 dollars in any month.")
+        break
+
+
+
+
+
