@@ -63,3 +63,32 @@ Did I spend $ 2000 in any mont? False
 After adding the expenses of June to the list : [2200, 2350, 2600, 2130, 2190, 1980]
 After returning the item bought in April and receiving the refund of $ 200, the monthly expense list became [2200, 2350, 2600, 1930, 2130, 2190, 1980]
 """
+print()
+#################################################################################################################################################################################
+
+# ex 2
+heros=['spider man','thor','hulk','iron man','captain america']
+
+# (1)
+print(f"Length of the list'heros' = {len(heros)}")
+
+# (2)
+heros.append('black panther')
+print(f"After adding 'black panther' at the end of the list, "
+      f"\nthe list becomes \n{heros}")
+
+# (3)
+heros.pop(-1) # remove the last element in the list of heros
+heros.insert(3, 'black panther') # add 'black panther' after 'hulk'
+print("The list in which 'black panther' is added after 'hulk':\n", heros)
+
+# (4)
+# heros.remove('thor') # remove 'thor'
+# heros.remove('hulk') # remove 'hulk'
+# heros.insert(1, 'doctor strange')
+heros[1: 3] = ['doctor strange'] # do not forget to put 'doctor strange' in the square bracket
+print(f"Solution for ex(4): {heros}")
+
+# (5)
+heros.sort()
+print("After sorting: ", heros)
