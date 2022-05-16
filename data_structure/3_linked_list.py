@@ -27,7 +27,7 @@ class LinkedList:
         if self.head is None:
             self.head = Node(data, None) # then pass the data to the Node with next as exmpty
                                             # head will point the node
-            return
+            return # return None
 
         itr = self.head # if the Linked_list is not empty
 
@@ -56,6 +56,14 @@ class LinkedList:
 
         print(llstr)
 
+    def get_length(self):
+        count = 0
+        itr = self.head
+        while itr:
+            count += 1
+            itr = itr.next
+        return count
+
 if __name__ == '__main__':
     ll = LinkedList()
     ll.insert_at_beginning(1)
@@ -65,3 +73,4 @@ if __name__ == '__main__':
     ll.print() # 2-->1-->9-->10-->
     ll.insert_values(["pineapple", "mango", "papaya"])
     ll.print() # pineapple-->mango-->papaya-->
+    print("length:", ll.get_length())
