@@ -64,6 +64,25 @@ class LinkedList:
             itr = itr.next
         return count
 
+    def remove_at(self, index):
+        if index < 0 or index >= self.get_length():
+            raise Exception("Invalid index")
+
+        if index == 0: # you are trying to remove the head
+            self.head = self.head.next # then shift the head to the next
+            return
+
+        count = 0 # else, you have to iterate till you reach the index prior to the one that you actually want to remove
+        itr = self.head
+        while itr:
+            if count == index - 1: # now the index before the index actually wanted to be got rid of
+                itr.next = itr.next.next # shift this prior index's next to the next of it
+                break
+
+            itr = itr.next
+            count += 1
+
+
 if __name__ == '__main__':
     ll = LinkedList()
     ll.insert_at_beginning(1)
@@ -73,4 +92,7 @@ if __name__ == '__main__':
     ll.print() # 2-->1-->9-->10-->
     ll.insert_values(["pineapple", "mango", "papaya"])
     ll.print() # pineapple-->mango-->papaya-->
-    print("length:", ll.get_length())
+    print("length:", ll.get_length()) # length: 3
+    ll.remove_at(2)
+    ll.print() # pineapple-->mango-->
+    ll.print() # pineapple-->mango-->
