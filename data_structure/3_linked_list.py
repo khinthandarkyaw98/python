@@ -96,3 +96,5 @@ if __name__ == '__main__':
     ll.remove_at(2)
     ll.print() # pineapple-->mango-->
     ll.print() # pineapple-->mango-->
+    ll.remove_at(0)
+    ll.print() # mango-->
