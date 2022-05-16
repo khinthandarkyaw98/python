@@ -21,6 +21,21 @@ class LinkedList:
                                         # which is before the data inserted now
         self.head = node # now, the head becomes the node of data inserted now
 
+    def insert_at_end(self, data): # if inserted at the end, it means next must be None
+        # suppose if you are inserting the data
+        # in a linked_list, then the head must be empty in the first place
+        if self.head is None:
+            self.head = Node(data, None) # then pass the data to the Node with next as exmpty
+                                            # head will point the node
+            return
+
+        itr = self.head # if the Linked_list is not empty
+
+        while itr.next: # then iterate till the end of it
+            itr = itr.next
+
+        itr.next = Node(data, None) # when it reaches the end, the pass it to the node
+
     def print(self):
         if self.head is None:
             print("Linked list is empty.")
@@ -39,4 +54,6 @@ if __name__ == '__main__':
     ll = LinkedList()
     ll.insert_at_beginning(1)
     ll.insert_at_beginning(2)
-    ll.print() # 2-->1-->
+    ll.insert_at_end(9)
+    ll.insert_at_end(10)
+    ll.print() # 2-->1-->9-->10-->
