@@ -36,6 +36,12 @@ class LinkedList:
 
         itr.next = Node(data, None) # when it reaches the end, the pass it to the node
 
+    def insert_values(self, data_list):
+        # first wipe out all the previous data in the Linked_list
+        self.head = None
+        for data in data_list:
+            self.insert_at_end(data) # bc there is no previous data now, so insert_at_end is used
+
     def print(self):
         if self.head is None:
             print("Linked list is empty.")
@@ -57,3 +63,5 @@ if __name__ == '__main__':
     ll.insert_at_end(9)
     ll.insert_at_end(10)
     ll.print() # 2-->1-->9-->10-->
+    ll.insert_values(["pineapple", "mango", "papaya"])
+    ll.print() # pineapple-->mango-->papaya-->
