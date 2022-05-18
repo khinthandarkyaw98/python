@@ -82,6 +82,24 @@ class LinkedList:
             itr = itr.next
             count += 1
 
+    def insert_at(self, index, data):
+        if index < 0 or index >= self.get_length():
+            raise Exception("Invalid index")
+
+        if index == 0:
+            self.insert_at_beginning(data)
+            return
+
+        count = 0
+        itr = self.head
+        while itr:
+            if count == index - 1: # the next must be next of the previous element
+                node = Node(data, itr.next) # point the next of the node to the previous element
+                itr.next = node
+                break
+
+            itr = itr.next 
+            count += 1
 
 if __name__ == '__main__':
     ll = LinkedList()
@@ -98,3 +116,6 @@ if __name__ == '__main__':
     ll.print() # pineapple-->mango-->
     ll.remove_at(0)
     ll.print() # mango-->
+    ll.insert_at(0, "strawberry")
+    ll.insert_at(1, "coconut")
+    ll.print() # strawberry-->coconut-->mango-->
