@@ -139,7 +139,7 @@ class LinkedList:
             return
 
         itr = self.head
-        while itr.next:
+        while itr.next: # bc itr.next must be iterated to get data 
             if itr.next.data == data:
                 itr.next = itr.next.next
                 break
