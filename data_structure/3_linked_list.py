@@ -90,15 +90,19 @@ class LinkedList:
             self.insert_at_beginning(data)
             return
 
+        """
+        if the index is in the middle of the Linked_list
+        we need to iterate
+        """
         count = 0
         itr = self.head
         while itr:
             if count == index - 1: # the next must be next of the previous element
-                node = Node(data, itr.next) # point the next of the node to the previous element
+                node = Node(data, itr.next) 
                 itr.next = node
                 break
 
-            itr = itr.next 
+            itr = itr.next
             count += 1
 
 if __name__ == '__main__':
@@ -117,5 +121,6 @@ if __name__ == '__main__':
     ll.remove_at(0)
     ll.print() # mango-->
     ll.insert_at(0, "strawberry")
+    ll.print() # strawberry-->mango-->
     ll.insert_at(1, "coconut")
     ll.print() # strawberry-->coconut-->mango-->
