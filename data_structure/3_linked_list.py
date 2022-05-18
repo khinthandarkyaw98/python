@@ -112,7 +112,41 @@ class LinkedList:
             itr = itr.next
             count += 1
 
+    def insert_after_value(self, data_after, data_to_insert):
+        # Search for first occurance of data_after value in linked list
+        # Now insert data_to_insert after data_after node
+        if self.head is None: # data_after not found
+            return
+
+        if self.head.data == data_after: # just found
+            self.head.next = Node(data_to_insert, self.head.next)
+            return
+
+        itr = self.head # need to iterate
+        while itr:
+            if itr.data == data_after:
+                itr.next = Node(data_to_insert, itr.next)
+                break
+            itr = itr.next
+
+    def remove_by_value(self, data):
+        # Remove first node that contains data
+        if self.head is None:
+            return
+
+        if self.head.data == data:
+            self.head = self.head.next
+            return
+
+        itr = self.head
+        while itr.next:
+            if itr.next.data == data:
+                itr.next = itr.next.next
+                break
+            itr = itr.next
+
 if __name__ == '__main__':
+    """
     ll = LinkedList()
     ll.insert_at_beginning(1)
     ll.insert_at_beginning(2)
@@ -131,3 +165,18 @@ if __name__ == '__main__':
     ll.print() # strawberry-->mango-->
     ll.insert_at(1, "coconut")
     ll.print() # strawberry-->coconut-->mango-->
+    """
+    ll = LinkedList()
+    ll.insert_values(["banana", "mango", "grapes", "orange"])
+    ll.print() # banana-->mango-->grapes-->orange-->
+    ll.insert_after_value("mango", "apple")  # insert apple after mango
+    ll.print() # banana-->mango-->apple-->grapes-->orange-->
+    ll.remove_by_value("orange")  # remove orange from linked list
+    ll.print() # banana-->mango-->apple-->grapes-->
+    ll.remove_by_value("figs")
+    ll.print() # banana-->mango-->apple-->grapes-->
+    ll.remove_by_value("banana")
+    ll.remove_by_value("mango")
+    ll.remove_by_value("apple")
+    ll.remove_by_value("grapes")
+    ll.print() # Linked list is empty.
