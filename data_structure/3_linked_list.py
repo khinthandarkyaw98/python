@@ -131,15 +131,15 @@ class LinkedList:
 
     def remove_by_value(self, data):
         # Remove first node that contains data
-        if self.head is None:
+        if self.head is None: # empty linked list
             return
 
-        if self.head.data == data:
+        if self.head.data == data: # found the data in the first place
             self.head = self.head.next
             return
 
-        itr = self.head
-        while itr.next: # bc itr.next must be iterated to get data 
+        itr = self.head # need to iterate
+        while itr.next: # bc itr.next must be iterated to get data
             if itr.next.data == data:
                 itr.next = itr.next.next
                 break
