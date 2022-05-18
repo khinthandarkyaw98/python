@@ -1,3 +1,10 @@
+"""
+stock_prices
+0x00500                          0x00A1             0x00C5
+[ 298  , 0xC702]                [ 305   , 0x00C5] [ 320   , 0x00D7]
+                0xC702
+                [ 294 , 0x00A1]
+"""
 # in a node, there are 2 things:
 # data and the ref to the address of next data from another node
 class Node:
@@ -97,8 +104,8 @@ class LinkedList:
         count = 0
         itr = self.head
         while itr:
-            if count == index - 1: # the next must be next of the previous element
-                node = Node(data, itr.next) 
+            if count == index - 1:# the next must be next of the previous element
+                node = Node(data, itr.next)
                 itr.next = node
                 break
 
