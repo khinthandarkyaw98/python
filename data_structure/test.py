@@ -1,28 +1,16 @@
-from datetime import datetime
+# pass hello_world func as an argument to repeat func
+def repeat(fn):
+    fn()
+    fn()
 
+def hello_world():
+    print("Hello world!")
 
-def log_datetime(func):
-    '''Log the date and time of a function'''
+repeat(hello_world)
 
-    def wrapper():
-        print(f'Function: {func.__name__}\nRun on: {datetime.today().strftime("%Y-%m-%d %H:%M:%S")}')
-        print(f'{"-" * 30}')
-        func()
-
-    return wrapper
-
-
-@log_datetime
-def daily_backup():
-    print('Daily backup job has finished.')
-
-
-daily_backup()
-
-# output
 """
-Function: daily_backup
-Run on: 2022-05-28 15:08:50
-------------------------------
-Daily backup job has finished.
+output
+Hello world!
+Hello world!
 """
+
