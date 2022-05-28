@@ -46,3 +46,20 @@ def hello():
     print("Hey, Hello")
 
 hello()
+
+print("*" * 20)
+
+########################################################################################
+def repeat_decorator(num_repeat = 2): # num_repeat = 5
+    def inner_decorator(fn):
+        def decorated_fn():
+            for i in range(num_repeat):
+                fn()
+        return  decorated_fn
+    return inner_decorator
+
+@repeat_decorator(5) # hello_world = repeat_decorator(hello_world)
+def hello_world():
+    print("Hello World!")
+
+hello_world()
