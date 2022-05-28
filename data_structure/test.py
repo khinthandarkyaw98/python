@@ -30,3 +30,19 @@ output
 Hello
 """
 
+#########################################################################################
+"""
+The above code can be written as follows by using @ character
+"""
+print("=" * 20)
+def decorator_func(func):
+    def wrapper():
+        func()
+        func()
+    return wrapper
+
+@decorator_func # this means ->>>> hello = decorator_func(hello)
+def hello():
+    print("Hey, Hello")
+
+hello()
