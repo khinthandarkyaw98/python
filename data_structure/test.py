@@ -63,3 +63,24 @@ def hello_world():
     print("Hello World!")
 
 hello_world()
+
+"""
+import time
+def time_it(func):
+    def wrapper(*args, **kwargs):
+        start = time.time()
+        result = func(*args, **kwargs)
+        end = time.time()
+        print(func.__name__ + " took " 
+        + str((end-start)*1000) + "mil sec")
+        return result
+    return wrapper
+    
+    
+# this file is saved as util.py
+
+# we can call the file as follows in another .py file
+
+from util import time_it
+@time_it # before the func we want to measure the time
+"""
