@@ -102,4 +102,13 @@ if __name__ == '__main__':
     ll.print_forward()
     ll.print_backward()
 
+"""
+In reverse order strawberry-->banana-->pineapple-->
+In forward order pineapple-->banana-->strawberry-->
+In forward order pineapple-->banana-->
+In forward order mango-->papaya-->apple-->
+In reverse order apple-->papaya-->mango-->
+
+"""
+
 
