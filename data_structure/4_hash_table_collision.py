@@ -85,6 +85,17 @@ print(t['march 17'])
 del t['march 17']
 print(t.arr)
 
+"""
+output
+['march 6', 310.0]
+stock price on March 9 =  302.0
+stock prices on March 9 =  302.0
+9
+[[], [], [], [], [], [], [], [], [], [('march 6', 10), ('march 17', 260)]]
+260
+del 1
+[[], [], [], [], [], [], [], [], [], [('march 6', 10)]]
 
+"""
 
 
