@@ -24,6 +24,8 @@ print("maximum temperature = ", max(arr))
 
 #############################################################################
 
+# the best data structure to use here
+# is a list bc all we want is to access the temperature elements
 
 
 
