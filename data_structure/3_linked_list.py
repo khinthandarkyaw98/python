@@ -31,7 +31,7 @@ class LinkedList:
     def insert_at_end(self, data): # if inserted at the end, it means next must be None
         # suppose if you are inserting the data
         # in a linked_list, then the head must be empty in the first place
-        if self.head is None:
+        if self.head is None: # bc there is no next in the end
             self.head = Node(data, None) # then pass the data to the Node with next as exmpty
                                             # head will point the node
             return # return None
