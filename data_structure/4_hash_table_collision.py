@@ -61,7 +61,16 @@ class HashTable:
     def __setitem__(self, key, val):
         h = self.get_hash(key)
         found = False
-        for idx, element in enumerate(self.arr[h]):
+        for idx, element in enumerate(self.arr[h]): # here, when we have linked_list, we gotta use enumerate to check and iterate the row
+            """a = [[], [], [], [], [], [], [], [], [], [('march 6', 10), ('march 17', 260)]]
+
+            for idx, element in enumerate(a[9]):
+                print(idx, element)
+
+            #output
+            #0('march 6', 10)
+            #1('march 17', 260)
+            """
             if len(element) == 2 and element[0] == key:
                 self.arr[h][idx] = (key, val)
                 found = True
