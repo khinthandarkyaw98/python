@@ -16,7 +16,7 @@ class HashTable:
         h = self.get_hash(key)
         if self.arr[h] is None:
             return
-        prob_range = self.get_prob_range(h)
+        prob_range = self.get_prob_range(h) # we have to use this bc this is probing, not chain
         for prob_index in prob_range:
             element = self.arr[prob_index]
             if element is None:
@@ -48,7 +48,7 @@ class HashTable:
                 return prob_index
         raise Exception("Hashmap Full")
 
-    def __delitem__(self, key): 
+    def __delitem__(self, key):
         h = self.get_hash(key)
         prob_range = self.get_prob_range(h)
         for prob_index in prob_range:
