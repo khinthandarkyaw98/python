@@ -14,6 +14,7 @@ with open("poem.txt", "r") as f:
             else:
                 word_count[token] = 1
 
-print(word_count)
+for word, count in word_count.items():
+    print(f"{word} : {count}")
 
 
