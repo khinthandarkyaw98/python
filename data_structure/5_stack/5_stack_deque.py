@@ -10,3 +10,10 @@ print(f"stack = {stack}")
 
 stack.pop()
 print(f"stack after pop() = {stack}")
+
+"""
+output
+stack = deque(['1'])
+stack = deque(['1', '2'])
+stack after pop() = deque(['1'])
+"""
