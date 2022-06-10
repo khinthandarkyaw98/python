@@ -39,24 +39,23 @@ def reverse_string(s):
 if __name__ == '__main__':
     print(reverse_string("We will conqure COvID-19"))
     print(reverse_string("I am the king"))
+    
+    a = Stack()
 
+    print("Push 5, 6, 7 into deque:")
+    print(a.push(5))
+    print(a.push(6))
+    print(a.push(7))
 
-a = Stack()
+    print(f"a.pop() = {a.pop()}")
 
-print("Push 5, 6, 7 into deque:")
-print(a.push(5))
-print(a.push(6))
-print(a.push(7))
+    print(f"a = {a.look()}")
 
-print(f"a.pop() = {a.pop()}")
+    print(f"size of a = {a.size()}")
 
-print(f"a = {a.look()}")
+    print(f"Is the deque empty? : {a.is_empty()}")
 
-print(f"size of a = {a.size()}")
-
-print(f"Is the deque empty? : {a.is_empty()}")
-
-print(f"a.peek() = {a.peek()}")
+    print(f"a.peek() = {a.peek()}")
 
 """
 output 
