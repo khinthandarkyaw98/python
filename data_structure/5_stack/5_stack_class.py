@@ -39,7 +39,7 @@ def reverse_string(s):
 if __name__ == '__main__':
     print(reverse_string("We will conqure COvID-19"))
     print(reverse_string("I am the king"))
-    
+
     a = Stack()
 
     print("Push 5, 6, 7 into deque:")
