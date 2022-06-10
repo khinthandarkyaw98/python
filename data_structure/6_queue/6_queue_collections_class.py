@@ -42,3 +42,15 @@ print(f"pq.look = {pq.look()}")
 print(f"pq.size = {pq.size()}")
 print(f"pq.dequeue = {pq.dequeue()}")
 print(f"pq.look = {pq.look()}")
+
+"""
+output
+pq.look = deque([{'company': 'Wall Mart', 'timestamp': '15 apr, 11.03 AM', 'price': 135}, 
+                {'company': 'Wall Mart', 'timestamp': '15 apr, 11.02 AM', 'price': 132}, 
+                {'company': 'Wall Mart', 'timestamp': '15 apr, 11.01 AM', 'price': 131.1}])
+pq.size = 3
+pq.dequeue = {'company': 'Wall Mart', 'timestamp': '15 apr, 11.01 AM', 'price': 131.1}
+pq.look = deque([{'company': 'Wall Mart', 'timestamp': '15 apr, 11.03 AM', 'price': 135}, 
+                {'company': 'Wall Mart', 'timestamp': '15 apr, 11.02 AM', 'price': 132}])
+"""
+
