@@ -84,3 +84,10 @@ def time_it(func):
 from util import time_it
 @time_it # before the func we want to measure the time
 """
+match = {
+        "}" : "{",
+        ")" : "(",
+        "]" : "["
+    }
+
+print(match["}"] == "{")
