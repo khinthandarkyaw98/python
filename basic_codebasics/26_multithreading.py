@@ -31,7 +31,7 @@ t2 = threading.Thread(target=func2, args = (a,))
 t1.start()
 t2.start()
 
-t1.join()
+t1.join() # go back to the main program after finishing
 t2.join()
 
 print(f"The processing time = {time.time()-t}")
