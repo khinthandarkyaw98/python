@@ -32,25 +32,25 @@ class TreeNode:
 
 
 def build_management_tree():
-    root = TreeNode("Nilupul", "CEO")
+    ceo = TreeNode("Nilupul", "CEO")
 
-    chinmay = TreeNode("Chinmay", "CTO")
+    cto = TreeNode("Chinmay", "CTO")
 
-    vishwa = TreeNode("Vishwa", "Infrastructure Head")
-    vishwa.add_child(TreeNode("Dhaval", "Cloud Manager"))
-    vishwa.add_child(TreeNode("Abhijit", "App Manager"))
+    infra_head = TreeNode("Vishwa", "Infrastructure Head")
+    infra_head.add_child(TreeNode("Dhaval", "Cloud Manager"))
+    infra_head.add_child(TreeNode("Abhijit", "App Manager"))
 
-    chinmay.add_child(vishwa)
-    chinmay.add_child(TreeNode("Aamir", "Application Head"))
+    cto.add_child(infra_head)
+    cto.add_child(TreeNode("Aamir", "Application Head"))
 
-    gels = TreeNode("Gels", "HR Head")
-    gels.add_child(TreeNode("Peter", "Recruitment Manager"))
-    gels.add_child(TreeNode("Waqas", "Policy Manager"))
+    hr_head = TreeNode("Gels", "HR Head")
+    hr_head.add_child(TreeNode("Peter", "Recruitment Manager"))
+    hr_head.add_child(TreeNode("Waqas", "Policy Manager"))
 
-    root.add_child(chinmay)
-    root.add_child(gels)
+    ceo.add_child(cto)
+    ceo.add_child(hr_head)
 
-    return root
+    return ceo
 
 if __name__ == "__main__":
     root_node = build_management_tree()
