@@ -16,7 +16,7 @@ def binary_func(a):
 
 if __name__ == "__main__":
     binary_func(int(input("Enter a number")))
-    
+
 """
 Enter a number4
 1
