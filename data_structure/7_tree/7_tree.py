@@ -1,3 +1,5 @@
+# when there is a hierarchy, tree should be used.
+
 class TreeNode:
     def __init__(self, data): # this is for the individual node.
         self.data = data
